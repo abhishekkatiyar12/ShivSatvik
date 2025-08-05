@@ -1,0 +1,25 @@
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.authBtn {
+  background: #ff5a5f;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}

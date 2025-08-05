@@ -1,0 +1,103 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Column layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.details p {
+  font-size: 16px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff5a5f;
+}
+
+.bookingSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dateInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dateInputs label {
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+.dateInputs input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.guests {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bookBtn {
+  background: #ff5a5f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.bookBtn:hover {
+  background: #e04e53;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .image {
+    max-height: 250px;
+  }
+}
