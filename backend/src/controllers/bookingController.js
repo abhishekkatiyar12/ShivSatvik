@@ -34,9 +34,13 @@ exports.createBooking = async (req, res) => {
     let pricePerNight = await applyDynamicPricing(flat.pricePerNight, checkIn);
     let totalAmount = pricePerNight * totalNights;
 
+
+     let discount=0;
     // ✅ Apply coupon if provided
     if (couponCode) {
+      const originalAmount = totalAmount;
       totalAmount = await applyCoupon(couponCode, totalAmount);
+      discount = originalAmount - totalAmount;
     }
 
     // ✅ Create Razorpay order
@@ -53,6 +57,7 @@ exports.createBooking = async (req, res) => {
       checkIn,
       checkOut,
       guests,
+      discount,
       amount: totalAmount,
       status: 'pending',
       razorpayOrderId: razorpayOrder.id
